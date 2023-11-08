@@ -26,12 +26,12 @@ def parser(url:str, max_item:int):
         page =+ 1
 
 def create_csv():
-    with open(f"santeh.csv", mode="w", newline="") as file:
+    with open(f"santeh.csv", mode="w", newline="", encoding="utf-8") as file:
         writer = csv.writer(file)
         writer.writerow(["name", "price", "link"])
 
 def write_csv(products:list):
-    with open(f"santeh.csv", mode="a", newline="") as file:
+    with open(f"santeh.csv", mode="a", newline="", encoding="utf-8") as file:
         writer = csv.writer(file)
         for product in products:
             writer.writerow([product.name, product.price, product.link])
